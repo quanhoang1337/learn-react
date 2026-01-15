@@ -11,15 +11,28 @@ const App = () => {
     { id: 2, name: "watching youtube" }
   ])
 
+  console.log("Check >>>", todoList)
+
   const name = "Quan pro";
   const age = 25;
   const data = {
     address: "ha noi",
     country: "vietnam"
   }
+
   const addNewTodo = (name) => {
-    alert(`call me ${name}`)
+    const newTodo = {
+      id: randomIntFromInterval(1, 10000),
+      name: name
+    }
+
+    setTodoList([...todoList, newTodo])
   }
+
+  const randomIntFromInterval = (min, max) => { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
 
   return (
     <div className="todo-container">
