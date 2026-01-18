@@ -8,8 +8,6 @@ const TodoNew = (props) => {
 
     const { addNewTodo } = props
 
-    console.log(props)
-
     const handleClick = () => {
         addNewTodo(valueInput)
         setValueInput("")
