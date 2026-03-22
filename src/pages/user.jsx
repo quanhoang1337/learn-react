@@ -3,11 +3,11 @@ import UserForm from "../components/user/user.form"
 import UserTable from "../components/user/user.table"
 import { fetchAllUserAPI } from "../services/api.service";
 
-const UserPage = (props) => {
+const UserPage = () => {
 
     const [dataUsers, setDataUsers] = useState([]);
 
-    // empty array => run once
+    // empty [] array => run once
     useEffect(() => {
         loadUser();
     }, []);
